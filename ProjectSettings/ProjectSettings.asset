@@ -134,7 +134,10 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 1.0.2
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -2307763298447049675, guid: fe08036b1e157924482634a95aa81324, type: 2}
+  - {fileID: -4108304460553817940, guid: 578a6d1262cbe0f4ead121241e046300, type: 2}
+  - {fileID: 11400000, guid: cd07fb47d974dfa4da949f575f24dd36, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -154,7 +157,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.ProjectBanshee
+    Android: com.FireDiamondGames.ProjectBanshee
     Standalone: com.DefaultCompany.ProjectBanshee
   buildNumber:
     Bratwurst: 0
