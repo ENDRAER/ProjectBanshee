@@ -6,10 +6,16 @@ using TMPro;
 
 public class BansheeScript : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] TextMeshProUGUI Speedometer;
-    [SerializeField] float BansheeSpeedScale = 5;
-    [NonSerialized] float RotationSpeedScale = 10;
+    [SerializeField] public Rigidbody RB;
+    [SerializeField] private Camera FPVCamera;
+    [SerializeField] private AudioSource EngineAU;
+    [SerializeField] private AudioSource[] Shoot;
+    [SerializeField] private TextMeshProUGUI Speedometer;
+    [SerializeField] private GameObject BulletPF;
+    [SerializeField] private GameObject[] BulletSpawners;
+    [NonSerialized] private bool ReadyToShoot = true;
+    [NonSerialized] private bool IsRightGunTurn = true;
+    [NonSerialized] float BansheeSpeed = 400;
 
 
     void FixedUpdate()
