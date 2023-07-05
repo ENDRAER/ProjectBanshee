@@ -21,9 +21,11 @@ public class BansheeScript : MonoBehaviour
     void FixedUpdate()
     {
         RB.AddRelativeForce(new(0,0, BansheeSpeed * (Input.GetButton("Boost")? 1.3f : 1)));
-        RB.AddRelativeTorque(new(Input.GetAxis("Ver") * 5, Input.GetAxis("RHor") * 2, Input.GetAxis("Hor") * 7));
-        EngineAU.pitch = 0.5f + (1f / 200f * RB.velocity.magnitude);
+        RB.AddRelativeTorque(new(Input.GetAxis("Ver") * 5, Input.GetAxis("RHor") * 2, Input.GetAxis("Hor") * 5));
+        float pitch = 0.5f + (1f / 200f * RB.velocity.magnitude);
+        EngineAU.pitch = pitch < 1? 1 : pitch;
         Speedometer.text = ((int)RB.velocity.magnitude).ToString();
+
         if (Input.GetAxis("Fire") > 0.9f && ReadyToShoot)
         {
             ReadyToShoot = false;
