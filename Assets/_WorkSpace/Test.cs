@@ -6,9 +6,10 @@ public class Test : MonoBehaviour
 {
     public Rigidbody RB;
     public GameObject GO;
+    public GameObject C;
 
     void FixedUpdate()
     {
-        RB.AddRelativeTorque(Quaternion.FromToRotation(GO.transform.position, transform.position).eulerAngles);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(GO.transform.position - transform.position), 2 * Time.deltaTime);
     }
 }

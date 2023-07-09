@@ -928,10 +928,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 514443182}
+  - component: {fileID: 514443178}
   - component: {fileID: 514443181}
   - component: {fileID: 514443180}
   - component: {fileID: 514443179}
-  - component: {fileID: 514443178}
   - component: {fileID: 514443177}
   m_Layer: 0
   m_Name: f
@@ -981,6 +981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB: {fileID: 514443177}
   GO: {fileID: 890288968}
+  C: {fileID: 0}
 --- !u!136 &514443179
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1593,7 +1594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890288968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.6, y: 3.57, z: -15.43}
+  m_LocalPosition: {x: -37.43904, y: 2.66, z: -15.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
