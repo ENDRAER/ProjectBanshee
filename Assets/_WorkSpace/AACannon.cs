@@ -24,8 +24,9 @@ public class AACannon : MonoBehaviour
 
     IEnumerator RateOfFire()
     {
-        yield return new WaitForSeconds(10);
-        Instantiate(RocketPF, Muzzle.transform.position, Muzzle.transform.rotation);
+        yield return new WaitForSeconds(3);
+        GameObject AARocketGO = Instantiate(RocketPF, Muzzle.transform.position, Muzzle.transform.rotation);
+        AARocketGO.GetComponent<AARocket>().Pursued = BansheeGO;
         StartCoroutine(RateOfFire());
     }
 }
