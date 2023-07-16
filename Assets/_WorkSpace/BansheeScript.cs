@@ -8,6 +8,7 @@ public class BansheeScript : MonoBehaviour
 {
     [SerializeField] public Rigidbody RB;
     [SerializeField] private Camera FPVCamera;
+    [SerializeField] private GameObject FPVCameraGO;
     [SerializeField] private AudioSource EngineAU;
     [SerializeField] private AudioSource[] Shoot;
     [SerializeField] private TextMeshProUGUI Speedometer;
@@ -40,9 +41,10 @@ public class BansheeScript : MonoBehaviour
         }
     }
 
-    void Update()
+    void LateUpdate()
     {
         FPVCamera.fieldOfView = 60 + (20f / 200f * RB.velocity.magnitude);
+        FPVCameraGO.transform.localEulerAngles = -(transform.InverseTransformDirection(RB.angularVelocity).normalized * RB.angularVelocity.magnitude) * 2;
     }
 
     IEnumerator ReadyToShootCor()
